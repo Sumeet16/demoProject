@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDataTablePagination from 'react-datatable-pagination'
 import "./Dashboard.css";
-import RevenueCard from "../../components/RevenueCard/RevenueCard";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
@@ -9,19 +8,6 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const [sales, setSales] = useState([])
   const [orders, setorders] = useState([]);
-
-  const [currentDate, setCurrentDate] = useState({
-    day: new Date().getDate(),
-    month: new Date().getMonth(),
-    year: new Date().getFullYear()
-  })
-
-  const [salesBracket, setSalesBracket] = useState({
-    daily: 0,
-    monthly: 0,
-    yearly: 0,
-    total: 0
-  })
 
   const adminToken = localStorage.getItem("adminToken");
 
@@ -58,81 +44,7 @@ const Dashboard = () => {
     getOrder();
   }, [])
 
-  useEffect(() => {
-    if (sales.length != 0) {
-
-      const dailySalesArray = [];
-      const monthlySalesArray = [];
-      const yearlySalesArray = [];
-      const totalSalesArray = [];
-
-      sales.forEach((sale) => {
-
-        const dateWithComma = sale.time.split(" ")[0];
-        const salesDateWithoutComma = dateWithComma.slice(0, -1);
-        const dateDMYarray = salesDateWithoutComma.split("/");
-
-        const temp = dateDMYarray[0]; // storing 1st ele as temp variable
-
-        // replacing date with month (2nd element becomes 1st)
-        const dateIndex = dateDMYarray.indexOf(dateDMYarray[0]);
-        if (dateIndex !== -1) {
-          dateDMYarray[0] = dateDMYarray[1];
-        }
-
-        // replacing month with date (1st element stored as a temp veriable becomes second)
-        const monthIndex = dateDMYarray.indexOf(dateDMYarray[1]);
-        if (monthIndex !== -1) {
-          dateDMYarray[1] = temp;
-        }
-
-        const formattedDate = new Date(dateDMYarray.join("-"));
-        // console.log(formattedDate);
-
-        const day = formattedDate.getDate()
-        const month = formattedDate.getMonth()
-        const year = formattedDate.getFullYear()
-
-        day == currentDate.day && dailySalesArray.push(sale.price)
-        month == currentDate.month && monthlySalesArray.push(sale.price)
-        year == currentDate.year && yearlySalesArray.push(sale.price)
-        totalSalesArray.push(sale.price)
-      })
-
-      // console.log({
-      //   monthlySalesArray,
-      //   dailySalesArray,
-      //   yearlySalesArray,
-      //   totalSalesArray
-      // })
-
-      function addArray(array) {
-        let total = 0
-        array.forEach((ele) => {
-          total = total + ele
-        })
-        return total
-      }
-
-      const daily = addArray(dailySalesArray)
-      const monthly = addArray(monthlySalesArray)
-      const yearly = addArray(yearlySalesArray)
-      const total = addArray(totalSalesArray);
-
-      setSalesBracket((prev) => {
-        return {
-          ...prev,
-          daily,
-          monthly,
-          yearly,
-          total
-        }
-      })
-
-    }
-  }, [sales])
-
-
+  
   var totalSales = 0
 
   for (let i = 0; i < sales.length; i++) {
@@ -157,13 +69,6 @@ const Dashboard = () => {
   return (
     <>
       <div className="revenue_container">
-        <div className="revenue-card-holder">
-          <RevenueCard title={"Yearly Sales"} amount={salesBracket.yearly / 100} />
-          <RevenueCard title={"Monthly Sales"} amount={salesBracket.monthly / 100} />
-          <RevenueCard title={"Daily Sales"} amount={salesBracket.daily / 100} />
-          <RevenueCard title={"Total Sales"} amount={(salesBracket.total) / 100} />
-        </div>
-
         <h1 style={{ marginLeft: '5rem', marginBlockStart: "3rem" }}>Approve Order</h1>
         <div className="recent_purchase">
           {orders.length > 0 ? <>
