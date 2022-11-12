@@ -1,0 +1,112 @@
+.payment_cont{
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 2rem;
+    z-index: -110;
+}
+
+.payment_cont img{
+    width: 15rem;
+    height: 15rem;
+}
+
+.note{
+    width: 80%;
+    color: rgb(218, 58, 58);
+    font-weight: 500;
+}
+
+.price{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(95, 94, 94);
+}
+
+.payment_cont .upiOnPhone{
+    display: flex;
+    flex-direction: row;
+}
+
+.upiOnPhone a{
+    color: rgb(60, 60, 225);
+    font-weight: 500;
+}
+
+.payment_cont .upiOnPhone p{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: rgb(159, 159, 159);
+    margin-top: 0.4rem;
+}
+
+.confirmOrderPage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: rgb(73, 56, 56);
+    border-radius: 2rem;
+    color: #fff;
+}
+
+
+.blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.585);
+}
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.firstRow p{
+    font-size: 1.3rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.3rem;
+    cursor: pointer;
+}
+
+.upiOnPhone a{
+    border: 0;
+    text-decoration: underline;
+}
+
+.success_page{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 40vh;
+    justify-content: space-around;
+    z-index: 1000000;
+    border-radius: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media screen and (max-width: 850px) {
+    .payment_cont{
+        width: 80%;
+    }
+}

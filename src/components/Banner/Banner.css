@@ -1,0 +1,40 @@
+.image-wrapper {
+    width: 100%;
+    position: relative;
+    left: 0;
+    height: 37vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-wrapper .blog-img {
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
+
+.image-wrapper p,
+.image-wrapper h1 {
+    color: white;
+    margin-inline: 3.3rem;
+}
+
+.image-wrapper p {
+    font-size: 15px;
+}
+
+.bannerFlexCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 30em) {
+    .bannerFlexCont{
+        display: block;
+    }
+}
+

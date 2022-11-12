@@ -1,0 +1,103 @@
+.courseContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-left: 1.2rem;
+}
+.courseContainer h1{
+    width: 90%;
+}
+
+.priceSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 14%;
+}
+
+.orignalPrice{
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(128, 128, 128, 0.586);
+}
+
+.discountPercentage{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(128, 128, 128, 0.586);
+}
+
+.discountedPrice{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff5e14;
+}
+
+.buyNowBTN{
+    text-decoration: none;
+    border: 2px solid #ff5e14;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ff5e14;
+    transition: 0.5s ease-out;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.buyNowBTN:hover{
+    background-color: black;
+    color: #fff;
+    border: none;
+    transition: 0.5s ease-out;
+}
+
+.courseContainer .sub_heading{
+    font-weight: 700;
+	color: #1e2331;
+	font-size: 1.7rem;
+}
+
+.sub_description{
+    width: 90%;
+    font-weight: 400;
+	color: rgba(128, 128, 128, 0.825);
+	font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.courseContainer img{
+    width: 95%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.back_Btn{
+    display: none;
+}
+
+.iconBack{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+@media only screen and (max-width: 30em) {
+
+    .back_Btn{
+        /* background-color: rgba(128, 128, 128, 0.73); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        color: rgba(0, 0, 0);
+        margin-inline: 1rem;
+        margin-block: 1.2rem;
+        display: block;
+    }
+}

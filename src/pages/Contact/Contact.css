@@ -1,0 +1,68 @@
+.contact{
+    color: #ff8f9b;
+}
+
+.contact_info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.inner_cont{
+    width: 50%;
+    background-color: #431d98;
+    color: #fff;
+    padding: 2rem 0;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner_cont div h2{
+    font-weight: 400;
+}
+
+.inner_cont div .desc{
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0.8rem;
+    width: 80%;
+}
+
+.new_contact{
+    color: #f2d9ff;
+}
+
+.big_circle{
+    background-color: #ff8e9b;
+    position: absolute;
+    bottom: -50%;
+    right: -20%;
+    width: 55%;
+    height: 50vh;
+    border-radius: 50%;
+}
+
+.big_circle::after{
+    content: "";
+    position: absolute;
+    background-color: #8551ffe6;
+    width: 25%;
+    height: 12.5vh;
+    border-radius: 50%;
+
+}
+
+@media screen and (max-width: 850px) {
+    .inner_cont{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .big_circle{
+        display: none;
+    }
+}

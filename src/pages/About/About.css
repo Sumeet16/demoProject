@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec1-wrapper,
+.sec2-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.sec2-wrapper{
+    margin-bottom: 3rem;
+}
+
+.sec1-wrapper .section1-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 60%;
+    color: gray;
+}
+
+.section1-content p{
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.section1-content img{
+    margin-top: 2rem;
+    margin-left: -1rem;
+}
+
+.sec2-wrapper{
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.sec2{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.sec2 h1{
+    margin: 1rem 0 1rem 0;
+}
+
+.sec2 hr{
+    border: 2px solid orange;
+    width: 15%;
+}
+
+.section2-content{
+    margin: 1rem 0 0 0 ;
+    color: gray;
+    font-size: 0.9rem;
+    word-spacing: 7px;
+}
+
+.section2-content :nth-child(2){
+    margin-top: 1rem;
+}
+
+.section2-content p{
+    font-size: 1rem;
+}
+
+.sec2-img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 3rem 0 0 1rem;
+}
+
+.sec2-img img{
+    margin: 0 1rem 0 1rem;
+}
+
+@media (max-width: 500px){
+    .sec1-wrapper .sec1-header{
+        text-align: center;
+    }
+
+    .sec1-wrapper .section1-content{
+        width: 100%;
+    }
+
+    .sec1-img img{
+        max-width: 100%;
+    }
+
+    .sec2-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .sec2-wrapper .sec2{
+        width: 100%;
+    }
+
+    .sec2-img{
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+
+    .sec2-img img{
+        margin: 1rem;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width : 1100px){
+    .sec1-wrapper .section1-content{
+        width: 100%;
+    }
+
+    .sec1-img img{
+        max-width: 100%;
+    }
+
+    .sec2-wrapper{
+        flex-direction: column;
+    }
+
+    .sec2-wrapper .sec2{
+        width: 67%;
+    }
+}

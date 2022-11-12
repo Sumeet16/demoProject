@@ -1,0 +1,176 @@
+.course-area{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.course-area .container{
+	width: 90%;
+    max-width: 40rem;
+}
+
+.section-title h2{
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.title{
+    position: relative;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 3px;
+    background-color: orangered;
+}
+
+.section-title p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+	font-weight: 500;
+	line-height: 1.7rem;
+	color: gray;
+}
+
+.row{
+    margin-bottom: 2rem;
+}
+
+.courseCard{
+    width: 95%;
+    height: 60vh;
+    padding: 1.55rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.image{
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.courseCard h2{
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.courseCard p {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 1.2rem;
+    margin-bottom: 2rem;
+    display: block;
+    display: -webkit-box;
+    height: calc(15px*1.4*5);
+    line-height: 1.4;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.courseCard a{
+    text-decoration: none;
+    border: 2px solid #ff5e14;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff5e14;
+    margin-left: 1.2rem;
+    transition: 0.5s ease-out;
+}
+
+.button:hover{
+    background-color: black;
+    color: #fff;
+    border: 2px solid transparent;
+    transition: 0.5s ease-out;
+}
+
+.viewMoreBTN{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: 0.5s ease-out;
+    background-color: #ff5e14;
+    margin-bottom: 4rem;
+}
+
+.viewMoreBTN:hover{
+    color: #fff;
+    background-color: black;
+}
+
+.course_card{
+    width: 90%;
+    padding: 0 0 1.55rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.course_card .image_card{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.course_card h2{
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.course_card p {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 1.2rem;
+    margin-bottom: 2rem;
+    display: block;
+    display: -webkit-box;
+    height: calc(15px*1.4*5);
+    line-height: 1.4;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course_card a{
+    text-decoration: none;
+    border: 2px solid #ff5e14;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff5e14;
+    margin-left: 1.2rem;
+    transition: 0.5s ease-out;
+    width: fit-content;
+}

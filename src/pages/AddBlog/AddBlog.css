@@ -1,0 +1,152 @@
+
+.blog-wrapper{
+    margin-block: 0;
+    padding: 2rem;
+}
+
+.blog-wrapper-addBlog {
+    height: auto;
+    padding: 1rem 1rem;
+    /* margin-block: 2.55rem; */
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.blog-wrapper-addBlog:first-child {
+    margin-block: 0;
+}
+
+.blog-show-img-addBlog {
+    height: 60vh;
+    width: 100%;
+    border-radius: 0.2rem;
+    box-shadow: 5px 5px 10rem rgba(119, 117, 117, 0.399);
+}
+
+.blog-wrapper-addBlog h1 {
+    font-size: 30px;
+    margin-top: 1.24rem;
+}
+
+.blog-wrapper-addBlog p {
+    /* font-size: 14px; */
+    /* margin-block: 0.55rem; */
+    color: rgb(84, 84, 84);
+}
+
+.blog-wrapper-addBlog button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.22s ease-in;
+    margin-top: 1rem;
+}
+
+.blog-wrapper-addBlog button:hover {
+    color: #fd7e14;
+    transition: all 0.22s ease-in;
+}
+
+.addBlogMainContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.addedBlog {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 29rem;
+    gap: 0.5rem;
+    background-color: rgba(229, 228, 228, 0.659);
+    padding: 1rem;
+}
+
+.addedBlogTitle {
+    font-size: 1.5rem;
+}
+
+.addedBlog button{
+    cursor: pointer;
+}
+
+.addBlogImage {
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.addBlogImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blogTags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+}
+
+.blogTags .tagName {
+    background-color: rgb(132, 132, 240);
+    color: aliceblue;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+}
+
+.input-holder-addblog{
+    height: auto;
+    padding: 1rem;
+    margin-block-start: 2rem;
+    width: 90%;
+    max-width: 30rem;
+    background-color: rgba(229, 228, 228, 0.659);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-holder-addblog input{
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 90%;
+}
+
+
+.input-holder-addblog h2{
+    color: rgb(132, 132, 240);
+}
+
+.input-holder-addblog .submit-btn{
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 85%;
+    background-color: rgb(132, 132, 240);
+    cursor: pointer;
+}
+
+.preview-image {
+    width: 80%;
+    height: fit-content;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,25 @@
+.blogContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blogMain {
+    width: 80%;
+    max-width: 40rem;
+}
+
+.blogMain h1 {
+    padding-top: 2rem;
+}
+
+.blogImageContain {
+    width: 100%;
+    height: 20rem;
+}
+
+.blogImageContain img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

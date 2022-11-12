@@ -1,0 +1,17 @@
+.MyLearning_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.MyLearning_container .row{
+    margin-top: 2rem;
+}
+
+@media screen and (min-width: 850px) {
+   .MyLearning_container{
+        width: 45%;
+        margin: 0 auto;
+   }
+}

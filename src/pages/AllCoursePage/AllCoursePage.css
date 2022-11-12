@@ -1,0 +1,103 @@
+.mainCourseContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.demoBox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.courseCard{
+    width: 30%;
+    height: auto;
+    padding: 1.55rem 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    /* text-align: left; */
+    /* margin-bottom: 3rem; */
+}
+
+.courseCard .imageCard{
+    width: 90%;
+    /* height: 30vh; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    margin: 0 auto;
+}
+
+.courseCard h2{
+    margin-left: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.courseCard p {
+    width: 85%;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 1.2rem;
+    margin-bottom: 2rem;
+    display: block;
+    display: -webkit-box;
+    height: calc(15px*1.4*5);
+    line-height: 1.4;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.courseCard a{
+    text-decoration: none;
+    border: 2px solid #ff5e14;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ff5e14;
+    margin-left: 1.2rem;
+    transition: 0.5s ease-out;
+    width: fit-content;
+}
+
+.button:hover{
+    background-color: black;
+    color: #fff;
+    transition: 0.5s ease-out;
+}
+
+.viewMoreBTN{
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    transition: 0.5s ease-out;
+    background-color: #ff5e14;
+    margin-bottom: 4rem;
+}
+
+.viewMoreBTN:hover{
+    color: #fff;
+    background-color: black;
+}
+
+@media only screen and (max-width: 30em) {
+    .demoBox{
+        flex-direction: column;
+    }
+
+    .courseCard{
+        width: 90%;
+    }
+}

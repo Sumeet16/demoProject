@@ -1,0 +1,104 @@
+nav{
+    padding: 1rem;
+}
+
+.link {
+    color: black;
+    font-size: 17px;
+    border: 2px solid white;
+    padding: 0.62rem;
+    border-radius: 0.22rem;
+    margin-inline: 0.55rem;
+    text-decoration: none;
+    transition: all 0.25s ease-in;
+
+}
+
+.link:hover {
+    background-color: white;
+    border: 2px solid rgb(132, 132, 240);
+
+    transition: all 0.25s ease-in;
+}
+
+
+.user-menu-close {
+    display: none; /* for now */
+    left: 69vh;
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    left: 67vh;
+    top: 9vh;
+    border-radius: 2.5vh;
+    border-top-right-radius: 0vh;
+    transition: all 0.35s ease-in;
+}
+
+.user-menu {
+    display: none; /* for now */
+    background-color: rgba(229, 228, 228, 0.659);
+    height: 30vh;
+    width: 30vh;
+    position: absolute;
+    left: -27vh;
+    top: 9vh;
+    border-radius: 2.5vh;
+    border-top-right-radius: 0vh;
+    transition: all 0.35s ease-in;
+
+}
+
+
+nav {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.user-img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.user-options {
+    display: flex;
+    gap: 1.95rem;
+}
+
+.logout-btn {
+    border: none;
+    outline: none;
+    border-radius: 0.22rem;
+    cursor: pointer;
+    padding: 0.55rem;
+    border: 2px solid white;
+    transition: all 0.25s ease-in;
+    background-color: rgb(132, 132, 240);
+}
+
+.user-img {
+    cursor: pointer;
+}
+
+
+.link-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.25rem;
+    height: auto;
+    width: 15vw;
+}

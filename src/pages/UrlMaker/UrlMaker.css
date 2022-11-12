@@ -1,0 +1,53 @@
+.url-maker{
+    margin-top: -8rem;
+}
+
+.uploaderStatusDiv{
+    width: 30%;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.upload_bar{
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.upload_bar_status, .upload_bar_status_2{
+    width: 100%;
+    height: 20px;
+    background-color: rgba(132, 132, 240, 0.676);
+    border-radius: 25px;
+    transition: 0.5s
+}
+
+.upload_bar_status_2{
+    background-color: rgb(115, 115, 241);
+    transition: 0.5s
+}
+
+.upload_bar h3{
+    margin-top: 2rem;
+}
+
+.downloadUrl{
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.copyToClip{
+    width: 50%;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    background: rgb(115, 115, 241);
+    margin: 2rem auto;
+}

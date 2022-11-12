@@ -1,0 +1,46 @@
+.banner_cont{
+    width: 100%;
+    background: url('../../assets/img/counterBg/bg1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-bottom: 5rem;
+}
+
+.bg_cont{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.banner_row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    color: #fff;
+}
+
+.banner_icons{
+    width: 4rem;
+    height: 4rem;
+    color: #ff5e14;
+}
+
+.banner_number{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.sub_heading{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}

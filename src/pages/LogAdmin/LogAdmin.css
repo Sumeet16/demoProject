@@ -1,0 +1,67 @@
+.logAdmin-back-image {
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+    margin-top: 1rem;
+  }
+  
+  .logAdmin-form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+  }
+  
+  .logAdmin-user-logo {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 18%;
+    border: 10px solid rgba(0, 0, 0, 0.4);
+  }
+  
+  .logAdmin-form-content .inputs {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: rgba(197, 191, 191, 0.4);
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+  
+  .inputs h2{
+    margin-top: 4rem;
+    color: white;
+  }
+  
+  .username {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .logo {
+    display: inline;
+    margin-right: 0.7rem;
+    padding: 0.6rem;
+  }
+  
+  .logAdmin-form-content input {
+    padding: 0.7rem;
+    outline: none;
+  }
+  
+  .login-btn {
+    width: 35%;
+    padding: 0.6rem;
+    cursor: pointer;
+  }
+  

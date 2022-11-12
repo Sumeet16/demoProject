@@ -1,0 +1,126 @@
+.service-area{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.service-area .container{
+	width: 90%;
+	max-width: 40rem;
+}
+
+.section-title h2{
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.banner_quote{
+	margin-top: 5rem;
+	width: 100%;
+	background: url('../../assets/img/bg/cta1.jpg');
+	background-position: right;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5rem;
+	padding: 5rem 0;
+}
+
+.banner_quote p{
+	width: 90%;
+	font-size: 1.9rem;
+	font-weight: 700;
+	color: #fff;
+}
+
+.banner_quote .btn{
+	border-radius: 2rem;
+}
+.title{
+    position: relative;
+}
+
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 3px;
+    background-color: orangered;
+}
+
+.section-title p {
+    font-size: 0.9rem;
+    margin-bottom: 4rem;
+	font-weight: 500;
+	line-height: 1.7rem;
+	color: gray;
+}
+
+.row{
+    margin-bottom: 2rem;
+}
+
+.features-icon {
+	margin-bottom: 15px;
+}
+.features-icon img {
+	max-width: 60px;
+}
+
+.features-icon span {
+	font-size: 40px;
+	color: #ff5e14;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+.features-wrap {
+	border: 1px solid #e6e6e6;
+	padding: 50px 30px;
+    margin-bottom: 2rem;
+}
+.features-wrap:hover {
+	background-image: url(../../assets/img/about/5.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-attachment: local;
+	transition: all .5s;
+}
+
+.features-wrap:hover h4{
+	color: #fff;
+}
+.features-wrap:hover p{
+	color: #fff;
+}
+
+.features-wrap h4 {
+	font-weight: 600;
+	color: #1e2331;
+	margin-bottom: 17px;
+	font-size: 18px;
+}
+.features-wrap p{
+	font-size: 0.85rem;
+	font-weight: 400;
+	color: gray;
+	margin-bottom: 1rem;
+}
+.features-wrap a {
+	font-size: 14px;
+	font-weight: 600;
+	color: #ff5e14;
+	text-decoration: none;
+}
+.home-three-about {
+	margin-top: -150px;
+	background: #fff;
+	position: relative;
+	padding-top: 15px;
+}

@@ -1,0 +1,10 @@
+.terms-frame{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.terms-frame iframe{
+    margin-bottom: 2rem;
+}

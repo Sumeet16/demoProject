@@ -1,0 +1,21 @@
+
+.blog-recent {
+    display: flex;
+    align-items: flex-start;
+    margin-block: 2rem;
+    justify-content: start;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.blog-recent-img {
+    height: 100%;
+    width: 27%;
+}
+
+.blog-recent p {
+    margin: 0;
+    word-wrap: break-word;
+    font-size: 16px;
+    margin-left: 1rem;
+}

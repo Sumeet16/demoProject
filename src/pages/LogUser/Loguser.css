@@ -1,0 +1,218 @@
+.login-back-image {
+  height: 100%;
+  position: fixed;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1;
+}
+
+.login-form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  height: fit-content;
+  min-height: 100vh;
+}
+
+.login-user-logo {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  top: 7%;
+  border: 10px solid rgba(0, 0, 0, 0.4);
+}
+
+.login-form-content .inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: rgba(197, 191, 191, 0.4);
+  border-radius: 10px;
+  margin-top: 2rem;
+  width: 40%;
+}
+
+.login-form-content h2{
+    margin-top: 4rem;
+}
+
+.inputs h2{
+  margin-top: 4rem;
+  color: black;
+}
+
+/* .inputs a {
+  color: black;
+} */
+
+.inputs a .userLink {
+  margin: 0;
+}
+
+.username {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.login-form-content .logo {
+  display: inline;
+  margin-right: 0.7rem;
+  padding: 0.6rem;
+}
+
+.login-form-content input {
+  border: none;
+  border-radius: 0.5rem;
+  line-height: normal;
+  padding: 0.7rem;
+  outline: none;
+  width: 70%;
+  text-align: center;
+}
+
+.password{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-form-content .login-btn {
+  width: 35%;
+  padding: 0.6rem;
+  cursor: pointer;
+  border-radius: 1.5rem;
+}
+
+.userLink{
+  color: blue;
+}
+
+/* 
+Mobile Responsive design 
+*/
+
+@media (min-width : 300px) and (max-width : 365px){
+  .login-user-logo{
+    top: 10%;
+  }
+
+  .login-form-content .inputs{
+    width: 95%;
+    padding: 0;
+  }
+  .login-form-content input{
+    margin-right: 0.9rem;
+    width: 100%;
+  }
+
+  .inputs .password{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width : 366px) and (max-width : 380px){
+  .login-user-logo{
+    top: 13%;
+  }
+
+  .login-form-content .inputs{
+    width: 95%;
+    padding: 0;
+  }
+  .login-form-content input{
+    margin-right: 0.9rem;
+    width: 70%;
+  }
+
+  .inputs .password{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width : 381px) and (max-width : 400px){
+  .login-user-logo{
+    top: 13%;
+  }
+
+  .login-form-content .inputs{
+    width: 95%;
+    padding: 0;
+  }
+  .login-form-content input{
+    margin-right: 0.9rem;
+    width: 100%;
+  }
+
+  .inputs .password{
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@media (min-width : 401px) and (max-width : 800px) {
+
+  .login-user-logo{
+    top: 15%;
+  }
+  
+  .login-form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .login-form-content .inputs{
+    width: 95%;
+  }
+
+  .inputs .password{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .login-form-content input{
+    margin-right: 0.9rem;
+  }
+}
+
+@media (min-width : 801px) and (max-width : 1000px) {
+
+  .login-user-logo{
+    top: 20%;
+  }
+  
+  .login-form-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .login-form-content .inputs{
+    width: 95%;
+  }
+
+  .inputs .password{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .login-form-content input{
+    margin-right: 0.9rem;
+  }
+}

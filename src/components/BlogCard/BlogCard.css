@@ -1,0 +1,55 @@
+.blog-wrapper {
+    height: auto;
+    padding: 1rem;
+    margin-block: 2.55rem;
+}
+
+.blog-wrapper:first-child {
+    margin-block: 0;
+}
+
+
+.blog-show-img {
+    height: 60vh;
+    width: 100%;
+    border-radius: 0.2rem;
+    box-shadow: 5px 5px 10rem rgba(119, 117, 117, 0.399);
+}
+
+.blog-wrapper h1 {
+    font-size: 30px;
+    margin-top: 1.24rem;
+}
+
+.blog-wrapper p {
+    font-size: 14px;
+    margin-block: 0.55rem;
+    color: rgb(84, 84, 84);
+}
+
+.blog-wrapper button {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.22s ease-in;
+}
+
+.blog-wrapper button:hover {
+    color: #fd7e14;
+    transition: all 0.22s ease-in;
+}
+
+@media only screen and (max-width: 30em) {
+
+.blog-show-img {
+    height: 23vh;
+    width: 100%;
+    border-radius: 0.2rem;
+    box-shadow: 5px 5px 10rem rgba(119, 117, 117, 0.399);
+}
+
+}

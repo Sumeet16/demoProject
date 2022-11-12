@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-verify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.main-verify .verify-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+    width: 100%;
+}
+
+.verify-form .otp-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.otp-form input{
+    padding: 0.7rem;
+    width: 18%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.otp-form button{
+    padding: 0.7rem;
+    width: 8%;
+    border-radius: 10px;
+    cursor: pointer;
+}

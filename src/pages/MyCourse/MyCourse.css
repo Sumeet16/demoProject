@@ -1,0 +1,41 @@
+.myCourse_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 0 0rem 1rem;
+}
+
+.myCourse_video_cont{
+    width: 95%;
+    padding: 1.5rem 2rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.myCourse_video_cont h2{
+    width: 90%;
+}
+
+.myCourse_video_cont .play_now_btn{
+    width: 55%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: #ff5e14;
+    color: #fff;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.3rem;
+    margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 850px) {
+    .myCourse_dummy_cont{
+        width: 30%;
+        margin: 0 auto;
+    }
+ }

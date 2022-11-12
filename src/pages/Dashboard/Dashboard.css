@@ -1,0 +1,34 @@
+.revenue-card-holder {
+    margin: 0 2rem;
+    margin-block-start: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.graph-area {
+    width: 100%;
+}
+
+.recent_purchase{
+    margin: 5rem auto;
+    width: 80%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

@@ -1,0 +1,38 @@
+.input-holder{
+    height: auto;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-block-start: 2rem;
+    width: 30vw;
+    background-color: rgba(229, 228, 228, 0.659);
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-holder input{
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 90%;
+}
+
+
+.input-holder h2{
+    color: rgb(132, 132, 240);
+}
+
+.input-holder .submit-btn{
+    border: none;
+    outline: none;
+    padding: 1rem;
+    width: 85%;
+    background-color: rgb(132, 132, 240);
+    cursor: pointer;
+}

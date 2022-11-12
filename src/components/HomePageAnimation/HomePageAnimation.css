@@ -1,0 +1,67 @@
+.screenAnimation{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+}
+
+.banner-desc {
+    padding: 4rem 1rem 0 1rem;
+}
+
+.home_content_box{
+    color: #fff;
+    height: 100%;
+    max-width: 50rem;
+}
+
+.home_content_box div {
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.home_content_box div h1 span{
+    color: orangered;
+}
+
+.home_content_box div p{
+    width: 80%;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.btn {
+	background: #ff5e14;
+	border: medium none;
+	border-radius: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 0;
+	padding: 18px 40px;
+	text-align: center;
+	text-transform: uppercase;
+	touch-action: manipulation;
+	transition: all 0.3s ease 0s;
+	vertical-align: middle;
+	white-space: nowrap;
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
+.btn:hover{
+	color: #fff;
+}
+
+@keyframes example {
+    0%   {opacity: 0;}
+    50%  {opacity: 0.5;}
+    100% {opacity: 1;}
+  }
