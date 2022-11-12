@@ -16,7 +16,7 @@ const Footer = () => {
                         <UilPhoneAlt className="footer_icon" />
                         <div className="inner_div">
                             <p className="bold">Phone No.</p>
-                            <p className="number">1234567890</p>
+                            <p className="number">7023639107</p>
                         </div>
                     </div>
                     <div className="row_1">
@@ -30,13 +30,13 @@ const Footer = () => {
                         <UilEnvelopeDownload className="footer_icon" />
                         <div className="inner_div">
                             <p className="bold">Mail Us</p>
-                            <p className="number">mail@gmail.com</p>
+                            <p className="number">tradelal.com@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 <div className="line_through"></div>
                 <div className="site_description">
-                    <div className="logo">COURSI<span className='dot'>.</span></div>
+                    <div className="logo">TRADELAL<span className='dot'>.</span></div>
                     <div className="site_disc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sed, eum eius molestiae inventore, earum vitae accusantium deserunt dignissimos, voluptatem adipisci soluta incidunt! Incidunt mollitia laboriosam in saepe officia fuga!</p></div>
                     <div className="social_links">
                         <h2 className='follow_us_header'>Follow Us</h2>
@@ -64,7 +64,7 @@ const Footer = () => {
                             <a href="/blogs">Blogs</a>
                             <a href="/contact">Contact Us</a>
                         </div>
-                        <div className="links" style={{marginInlineStart: "3rem"}}>
+                        <div className="links" style={{ marginInlineStart: "3rem" }}>
                             <a href="/terms&condition">Terms & Conditions</a>
                             <a href="/return-policy">Return Policy</a>
                             <a href="/shipping-policy">Shipping Policy</a>
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="copyright_bar">
-                    <p className="copyright_text">Copyright @ 2022, All Right Reserved <a href='#'>Coursi</a></p>
+                    <p className="copyright_text">Copyright @ 2022, All Right Reserved <a href='#'>TRADELAL</a></p>
                 </div>
             </div>
         </>

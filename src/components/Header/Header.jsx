@@ -36,7 +36,7 @@ const Header = (props) => {
       <header>
         <div className="nav">
           <div className="logo" style={{ color: props.color }}>
-            COURSI<span className="dot">.</span>
+            TRADELAL<span className="dot">.</span>
           </div>
 
           <div className="mobile-nav-bar-logo">

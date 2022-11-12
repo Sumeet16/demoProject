@@ -25,7 +25,7 @@ router.post("/order", async (req, res) => {
             const template = `
                 <div style="background-color: #170F1E; color:#fff; padding: 1.5rem; border-radius: 10px;">
                     <h1 style="font-family: Gill Sans, sans-serif;
-                    font-weight: 500; color: #fff;">Coursi<span style="color: orange;">.</span></h1>
+                    font-weight: 500; color: #fff;">TRADELAL<span style="color: orange;">.</span></h1>
                     <h2 style="font-family: Gill Sans, sans-serif;
                     font-weight: 500; color: #fff;">Order is submitted for confirmation.</h2>
                     <h3 style="font-family: Gill Sans, sans-serif;
@@ -36,14 +36,14 @@ router.post("/order", async (req, res) => {
                     font-weight: 400; color: rgb(228, 82, 82)">Note: The order will be confirmed within 24 hr.</h5>
                     <br/><br/>
                     Regards,<br/>
-                    Team Coursi 2022
+                    Team TRADELAL 2022
                     </h3>
                 </div>
             `
             const template2 = `
                 <div style="background-color: #170F1E; color:#fff; padding: 1.5rem; border-radius: 10px;">
                     <h1 style="font-family: Gill Sans, sans-serif;
-                    font-weight: 500; color: #fff;">Coursi<span style="color: orange;">.</span></h1>
+                    font-weight: 500; color: #fff;">TRADELAL<span style="color: orange;">.</span></h1>
                     <h2 style="font-family: Gill Sans, sans-serif;
                     font-weight: 500; color: #fff;">New Order Recived.</h2>
                     <h3 style="font-family: Gill Sans, sans-serif;
@@ -54,7 +54,7 @@ router.post("/order", async (req, res) => {
                     <a href="http://admin.localhost:5173/" target="_blank" style="color: #fff; background-color: orange; padding: 1rem 2.5rem; text-decoration: none; border-radius: 2rem; font-size: 1rem; font-weight: 600;">Go To Portal</a>
                     <br/><br/><br/>
                     Regards,<br/>
-                    Team Coursi 2022
+                    Team TRADELAL 2022
                     </h3>
                 </div>
             `

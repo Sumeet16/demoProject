@@ -50,7 +50,7 @@ router.post("/addNewMeeting", async (req, res) => {
         const template = `
             <div style="background-color: #170F1E; color:#fff; padding: 1.5rem; border-radius: 10px;">
             <h1 style="font-family: Gill Sans, sans-serif;
-            font-weight: 500; color: #fff;">Coursi<span style="color: orange;">.</span></h1>
+            font-weight: 500; color: #fff;">TRADELAL<span style="color: orange;">.</span></h1>
             <h2 style="font-family: Gill Sans, sans-serif;
             font-weight: 500; color: #fff;">New Meeting is scheduled!!!</h2>
             <h3 style="font-family: Gill Sans, sans-serif;
@@ -63,7 +63,7 @@ router.post("/addNewMeeting", async (req, res) => {
             <a href=${meetingLink} target="_blank" style="color: #fff; background-color: orange; padding: 1rem 2.5rem; text-decoration: none; border-radius: 2rem; font-size: 1rem; font-weight: 600;">Join Now</a>
             <br/><br/><br/>
             Regards,<br/>
-            Team Coursi 2022
+            Team TRADELAL 2022
             </h3>
             </div>
         `
@@ -82,7 +82,7 @@ router.post("/addNewMeeting", async (req, res) => {
             const mailOption = {
                 from: senderMail,
                 to: element,
-                subject: "New Meeting Scheduled For Coursi",
+                subject: "New Meeting Scheduled For TRADELAL",
                 html: template,
                 text: template,
             }

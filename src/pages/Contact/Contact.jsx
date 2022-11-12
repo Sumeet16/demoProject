@@ -21,7 +21,7 @@ const Contact = () => {
                             <UilPhoneAlt className="footer_icon contact" />
                             <div className="inner_div new_contact">
                                 <p className="bold">Phone No.</p>
-                                <p className="number" style={{ color: "#f2d9ff", fontSize: "0.8rem" }}>1234567890</p>
+                                <p className="number" style={{ color: "#f2d9ff", fontSize: "0.8rem" }}>7023639107</p>
                             </div>
                         </div>
                         <div className="row_1">
@@ -35,7 +35,7 @@ const Contact = () => {
                             <UilEnvelopeDownload className="footer_icon contact" />
                             <div className="inner_div new_contact">
                                 <p className="bold">Mail Us</p>
-                                <p className="number" style={{ color: "#f2d9ff", fontSize: "0.8rem" }}>mail@gmail.com</p>
+                                <p className="number" style={{ color: "#f2d9ff", fontSize: "0.8rem" }}>tradelal.com@gmail.com</p>
                             </div>
                         </div>
                     </div>
