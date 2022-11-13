@@ -41,7 +41,7 @@
     background-color: rgba(197, 191, 191, 0.4);
     border-radius: 10px;
     margin-top: 2rem;
-    /* width: 40%; */
+    width: 40%;
 }
 
 .user-form-content .inputContainer {
@@ -60,12 +60,6 @@
 .inputContainer > div {
   width: 100%;
   justify-content: center;
-}
-
-.check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .user-form-content h2 {
@@ -95,20 +89,21 @@
     cursor: pointer;
 }
 
+.alreadyuser input{
+    width: 3.5%;
+    margin-left: 0rem;
+}
+
 .alreadyuser {
     width: 100%;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .alreadyuser .userLink {
     color: black !important;
     margin-left: 1rem;
-}
-
-.check a {
-    text-decoration: none;
-    color: black;
 }
 
 .contact {
@@ -141,6 +136,10 @@ input {
 
 input#phone {
   margin: 0;
+}
+
+.new{
+    margin-left: 35%;
 }
 
 @media (min-width: 300px) and (max-width: 365px) {

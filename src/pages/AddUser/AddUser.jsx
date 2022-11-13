@@ -73,7 +73,7 @@ const AddUser = () => {
                 username, email, password, code, phone
             })
         })
-        
+
 
         const result = await res.json();
         const statusCode = res.status;
@@ -117,32 +117,32 @@ const AddUser = () => {
     return (
         <>
             <img src={backImg} className="login-back-image" alt="back-image" />
-            <div className="user-form-content">
+            <div className="login-form-content" style={{marginTop: "-2rem"}}>
                 <form method="post" className="inputs" onSubmit={handleSubmit}>
 
-                    <h2>Register Yourself</h2>
+                    <h2 style={{ color: "black" }}>Register Yourself</h2>
                     <div className="inputContainer">
-                        <div className="username">
+                        <div className="username" style={{ marginBottom: "2rem" }}>
                             <div className="logo">
                                 <i class="fa fa-user"></i>
                             </div>
                             <input type="text" name="username" id="username" placeholder="Enter Your Username" onChange={handleChange} autoComplete="off" />
                         </div>
 
-                        <div className="username">
+                        <div className="username" style={{ marginBottom: "2rem" }}>
                             <div className="logo">
                                 <i class="fa fa-envelope"></i>
                             </div>
                             <input type="text" name="email" id="email" placeholder="Enter Your Email" onChange={handleChange} autoComplete="off" />
                         </div>
 
-                        <div className="password">
+                        <div className="password" style={{ marginBottom: "2rem" }}>
                             <div className="logo">
                                 <i class="fa fa-unlock-alt"></i>
                             </div>
                             <input type="password" name="password" id="password" placeholder="Enter Your Password" onChange={handleChange} autoComplete="off" />
                         </div>
-                        <div className="contact">
+                        <div className="contact" style={{ marginBottom: "2rem" }}>
                             <div className="contact-group">
                                 <div className="logo">
                                     <i class="fa fa-phone"></i>
@@ -165,14 +165,15 @@ const AddUser = () => {
                                 <input type="number" name="phone" id="phone" placeholder="Enter Your Phone" onChange={handleChange} autoComplete="off" />
                             </div>
                         </div>
-                        <div className="check">
-                            <input type="checkbox" onChange={handleCheckChange} /> <a href="/terms&condition">Terms and Condition</a>
+                        <div className="alreadyuser" style={{marginBottom: "1rem"}}>
+                            <input type="checkbox" onChange={handleCheckChange} />
+                            <a href="/terms&condition">Terms and Condition</a>
                         </div>
                         <div className="alreadyuser">
-                            <a href="/loguser" className="userLink">Already a User</a>
+                            <a href="/loguser" className="userLink" style={{marginBottom: "1rem"}}>Already a User</a>
                         </div>
 
-                        <button type="submit" className="login-btn">Register</button>
+                        <button type="submit" className="login-btn new">Register</button>
                         <ToastContainer />
                     </div>
 
