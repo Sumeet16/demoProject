@@ -100,10 +100,10 @@ const LogUser = () => {
                         <input type="password" name="password" id="password" placeholder="Enter Your Password" onChange={handleChange} autoComplete="off" />
                     </div>
                     <div className="update_pass">
-                        <a href="/updatepass" className="userLink">Forgot Password</a>
+                        <a href="/updatepass" className="userLink" style={{color: "black"}}>Forgot Password</a>
                     </div>
                     <div className="alreadyuser">
-                        <a href="/adduser" style={{color:"blue"}}>Create Account</a>
+                        <a href="/adduser" style={{color:"black"}}>Create Account</a>
                     </div>
 
                     <button type="submit" className="login-btn">Login</button>
