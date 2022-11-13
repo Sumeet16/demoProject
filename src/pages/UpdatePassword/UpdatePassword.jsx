@@ -78,7 +78,7 @@ const UpdatePassword = () => {
                 draggable: true,
                 progress: undefined,
             });
-            navigate("/verify", {replace:true})
+            navigate("/verify-pin", {replace:true})
         }
 
 

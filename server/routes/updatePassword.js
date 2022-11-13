@@ -47,7 +47,7 @@ router.post("/updatepassword", async (req, res) => {
                     from: senderEmail,
                     to: userDetails.email,
                     subject: "Email Verification",
-                    html: `<h3> ${otp} is the OTP to verify your Email </h3>`
+                    html: `<h3> ${otp} is the OTP to update your password. </h3>`
                 }
 
                 transporter.sendMail(mailOption, async (error, info) => {

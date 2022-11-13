@@ -3,6 +3,7 @@ import "./UrlMaker.css"
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { UilTrashAlt } from '@iconscout/react-unicons'
 
 
 const UrlMaker = () => {
@@ -15,6 +16,23 @@ const UrlMaker = () => {
             method: "GET",
         });
         setvideoData(res.data.video);
+    }
+
+    const deleteIt = async (id) => {
+        const res = await fetch("http://localhost:8080/deleteVideo", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                id
+            })
+        })
+
+        const result = await res.json();
+        console.log(result);
+
+        getVideoList();
     }
 
 
@@ -119,6 +137,7 @@ const UrlMaker = () => {
                     {videoData.length == 0 ? <><b>No Video Data</b></> : <div className="updateCourseCard">
                         {
                             videoData.map((elem, index) => {
+                                console.log(elem);
                                 return (
                                     <>
                                         <div className="cardRow">
@@ -133,7 +152,10 @@ const UrlMaker = () => {
                                                 </div>
                                             </div>
                                             <div className="rightSide" style={{ width: "15%" }}>
-                                                <div className="editBTN" style={{ fontWeight: "800", fontSize: "1.1rem" }}> <a style={{ textDecoration: "none", color: "black", border: "none" }} href={elem.videoUel} target="_blank" rel="noopener noreferrer">View Now</a> </div>
+                                                <div className="editBTN" style={{ fontWeight: "800", fontSize: "1.1rem" }}> <a style={{ textDecoration: "none", color: "black", border: "none" }} href={elem.videoUrl} target="_blank" rel="noopener noreferrer">View Now</a> </div>
+                                            </div>
+                                            <div className="rightSide" style={{ width: "15%" }}>
+                                                <div className="deleteBTN"><UilTrashAlt onClick={() => { deleteIt(elem._id) }} /></div>
                                             </div>
                                         </div>
                                     </>

@@ -18,12 +18,11 @@ const Events = () => {
             });
 
             const data = res.data.meetings;
-
             const courseIds = localStorage.getItem("userData").split(",");
 
             const arr = [];
 
-            for (let i = 0; i < courseIds.length; i++) {
+            for (let i = 0; i < data.length; i++) {
                 if (data[i] != null) {
                     courseIds.forEach(element => {
                         if (element === data[i].courseId) {
@@ -48,7 +47,7 @@ const Events = () => {
                     ScheduleMeeting.map((elem, index) => {
                         return (
                             <>
-                                <div className="cardRow" style={{ marginLeft: "1rem" }}>
+                                <div className="cardRow" style={{ marginLeft: "1rem", marginTop: "2rem" }}>
                                     <div className="leftSide" style={{ width: "85%" }}>
                                         <div className="detailsDiv">
                                             <p className="detailDivTitle">Meeting Title</p>

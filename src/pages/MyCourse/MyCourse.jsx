@@ -41,7 +41,7 @@ const MyCourse = () => {
                 <h2>{courseInfo.title}</h2>
                 <div className="myCourse_dummy_cont">
                     {
-                        video.reverse().map((elem, index) => {
+                        video.map((elem, index) => {
                             return (
                                 <div className="myCourse_video_cont" key={index}>
                                     <h2 className="course_title">{elem.videoTitle}</h2>

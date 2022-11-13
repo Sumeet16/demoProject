@@ -190,7 +190,6 @@ const AddProduct = () => {
 
     const result = await res.json();
     const data = result.course;
-    console.log(result);
     setNewCourseSchema({
       title: "",
       price: 0,
@@ -202,6 +201,11 @@ const AddProduct = () => {
     })
 
     getCourse()
+
+    if (result.message === "Courses is updated! 🟢") {
+      setshowUpdateBox(false)
+      alert("Course Updated!!!")
+    }
   }
 
 
@@ -254,6 +258,14 @@ const AddProduct = () => {
                 onChange={(event) => { setupdateCourseInfo({ ...updateCourseInfo, [event.target.name]: event.target.value }) }}
                 value={updateCourseInfo.courseImage}
               />
+              <a href="https://imgur.com/upload" target="_blank">Get URL</a>
+              <input
+                type="text"
+                name="videoTitle"
+                id="vTitle"
+                placeholder="Enter video title here"
+                onChange={(event) => handleChange(event)}
+              />
               <div className="addVideoCont">
                 <input
                   type="text"
@@ -268,10 +280,10 @@ const AddProduct = () => {
               </div>
               <div className="videoLinksDisplayBox">
                 {
-                  videoDisplay.map((elem, index) => {
+                  videos.map((elem, index) => {
                     return (
                       <>
-                        <div><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index); }} /><a href={elem}><p>{elem}</p></a><br /></div>
+                        <div className="videoLink_innerDiv" style={{display: "flex"}}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index); }} /><a href={elem.videoUrl}>{elem.videoUrl}</a><br /></div>
                       </>
                     )
                   })
@@ -324,6 +336,7 @@ const AddProduct = () => {
                 placeholder="Enter Course Image URL here"
                 onChange={(event) => handleChange(event)}
               />
+              <a href="https://imgur.com/upload" target="_blank">Get URL</a>
               <input
                 type="text"
                 name="videoTitle"
@@ -346,9 +359,10 @@ const AddProduct = () => {
               <div className="videoLinksDisplayBox">
                 {
                   videoDisplay.map((elem, index) => {
+                    console.log(elem);
                     return (
                       <>
-                        <div><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index) }} /><a href={elem}><p>{elem}</p></a><br /></div>
+                        <div className="videoLink_innerDiv" style={{display: "flex"}}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index) }} /><a href={elem}>{elem}</a><br /></div>
                       </>
                     )
                   })
@@ -374,7 +388,7 @@ const AddProduct = () => {
                             </div>
                             <div className="detailsDiv">
                               <p className="detailDivTitle">Course Price</p>
-                              <p className="details">{course[index].dprice}$</p>
+                              <p className="details">{course[index].dprice} RS</p>
                             </div>
                             <div className="detailsDiv">
                               <p className="detailDivTitle">Discount</p>

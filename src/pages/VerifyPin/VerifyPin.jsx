@@ -1,28 +1,27 @@
 import React, { useState } from "react";
-import "./verify.css"
 import Headers from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Verify = () => {
+const VerifyPin = () => {
     const [otp, setOtp] = useState();
     const navigate = useNavigate();
 
-    const handleChange = (event)=>{
+    const handleChange = (event) => {
         setOtp(event.target.value)
     }
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch("http://localhost:8080/verify", {
+        const res = await fetch("http://localhost:8080/verifypin", {
             method: "POST",
             headers: {
-                "Content-Type" : "application/json"
+                "Content-Type": "application/json"
             },
-            body : JSON.stringify({
+            body: JSON.stringify({
                 otp
             })
         });
@@ -31,7 +30,7 @@ const Verify = () => {
         const status = res.status;
         console.log(result);
         console.log(status);
-        if(status == 500){
+        if (status == 500) {
             toast.error('Username Not Found !!!', {
                 position: "top-right",
                 autoClose: 5000,
@@ -41,7 +40,7 @@ const Verify = () => {
                 draggable: true,
                 progress: undefined,
             });
-        }else if(status == 422){
+        } else if (status == 422) {
             toast.error('Please Enter OTP !!!', {
                 position: "top-right",
                 autoClose: 5000,
@@ -51,8 +50,8 @@ const Verify = () => {
                 draggable: true,
                 progress: undefined,
             });
-        }else{
-            navigate("/logUser", {replace: true})
+        } else {
+            navigate("/logUser", { replace: true })
         }
     }
     return (
@@ -82,4 +81,4 @@ const Verify = () => {
     )
 }
 
-export default Verify
+export default VerifyPin

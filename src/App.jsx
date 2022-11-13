@@ -31,6 +31,7 @@ import Events from './pages/Events/Events'
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import ReturnPolicy from './pages/ReturnPolicy/ReturnPolicy'
 import ShippingPolicy from './pages/ShippingPolicy/ShippingPolicy'
+import VerifyPin from './pages/VerifyPin/VerifyPin'
 
 
 const App = () => {
@@ -87,6 +88,7 @@ const App = () => {
                 <Route path='/updatepass' element={<UpdatePassword />} />
                 <Route path='/community' element={<CommunityTab />} />
                 <Route path='/verify' element={ <Verify />} />
+                <Route path='/verify-pin' element={ <VerifyPin />} />
                 <Route path='/contact' element={ <Contact />} />
                 <Route path='/events' element={ <Events />} />
               </Routes>

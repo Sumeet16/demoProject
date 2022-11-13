@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import slugify from "slugify";
 import "react-toastify/dist/ReactToastify.css";
 import './AddBlog.css'
+
 const AddBlog = () => {
   const [blogs, setBlogs] = useState([]);
   const [newBlogSchema, setNewBlogSchema] = useState({
@@ -55,6 +56,8 @@ const AddBlog = () => {
         progress: undefined,
       });
     }
+
+    getBlogs();
   }
 
   const handleSubmit = async (event) => {

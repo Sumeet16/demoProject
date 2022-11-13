@@ -49,17 +49,19 @@ const MyLearning = () => {
             <Banner bannerImg={bannerImg} title="MY LEARNING" component="Home/Pages/MyLearning" />
             <div className="MyLearning_container">
                 <div class="row">
-                    {
-                        courses.map((elem, index) => {
-                            return (
-                                <div className="course_card" key={index}>
-                                    <img src={elem.courseImage} className="image image_card" alt="image" />
-                                    <h2>{elem.title}</h2>
-                                    <a className="button" onClick={() => { navigate(`/mycourse?id=${elem._id}`, { replace: true }); window.scrollTo(top) }}>Go To Course</a>
-                                </div>
-                            )
-                        })
-                    }
+                    {courses.length > 0 ? <>
+                        {
+                            courses.map((elem, index) => {
+                                return (
+                                    <div className="course_card" key={index}>
+                                        <img src={elem.courseImage} className="image image_card" alt="image" />
+                                        <h2>{elem.title}</h2>
+                                        <a className="button" onClick={() => { navigate(`/mycourse?id=${elem._id}`, { replace: true }); window.scrollTo(top) }}>Go To Course</a>
+                                    </div>
+                                )
+                            })
+                        }
+                    </> : <><h1>Nothing In My Learning</h1> <a href="courses" class="btn">View Courses</a></>}
                 </div>
 
             </div>
