@@ -25,10 +25,19 @@ const ChatRoom = () => {
   const [chatInput, setchatInput] = useState("");
   const queryParams = new URLSearchParams(window.location.search);
   const id = queryParams.get('id');
+  let username;
   const dummy = useRef();
   const messagesRef = firestore.collection(id);
   const query = messagesRef.orderBy('createdAt').limit(25);
   const [messages] = useCollectionData(query, { idField: 'id' });
+  let i
+
+  username = queryParams.get('userName');
+  if (username === "Admin") {
+    i = username
+  } else {
+    i = localStorage.getItem("userName");
+  }
 
   const handleChange = (e) => {
     setchatInput(e.target.value);
@@ -37,7 +46,6 @@ const ChatRoom = () => {
   const sendMessage = async (e) => {
     e.preventDefault();
     const u = uid();
-    const i = localStorage.getItem("userName");
     const m = moment().format('lll');
 
     await messagesRef.add({
@@ -51,6 +59,8 @@ const ChatRoom = () => {
     setchatInput("")
   }
 
+  console.log(i);
+
   return (
     <>
       <Header color="black" />
@@ -60,7 +70,7 @@ const ChatRoom = () => {
             {messages ? messages.map((elem, index) => {
               return (
                 <>
-                  {localStorage.getItem("userName") === elem.i ? <>
+                  {i === elem.i ? <>
                     <div className="individual_chat_container send">
                       <div className="person_image">{(elem.i).charAt(0)}</div>
                       <div className="inner_chat_cont">

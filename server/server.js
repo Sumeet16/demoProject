@@ -49,6 +49,7 @@ app.use(require("./routes/register"))
 app.use(require("./routes/addCourse"))
 app.use(require("./routes/pay"))
 app.use(require("./routes/order"))
+app.use(require("./routes/getUsers"))
 app.use(require("./routes/getUser"))
 app.use(require("./routes/updatePassword"));
 app.use(require("./routes/deleteBlog"));

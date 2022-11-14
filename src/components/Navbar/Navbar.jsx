@@ -43,14 +43,14 @@ const Navbar = () => {
           <Link to="scheduler" className="link">
             Meeting Scheduler
           </Link>
-          <Link to="urlmaker" className="link">
-            Url Maker
+          <Link to="chatroom" className="link">
+            Chat Room
           </Link>
           <Link to="addBlog" className="link">
             Add Blog
           </Link>
-          <Link to="refDash" className="link">
-            Referral Dashboard
+          <Link to="userdetail" className="link">
+            User Details
           </Link>
         </div>
         <div className="user-options">

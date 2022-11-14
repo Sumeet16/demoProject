@@ -32,6 +32,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy'
 import ReturnPolicy from './pages/ReturnPolicy/ReturnPolicy'
 import ShippingPolicy from './pages/ShippingPolicy/ShippingPolicy'
 import VerifyPin from './pages/VerifyPin/VerifyPin'
+import UserDetail from './pages/UserDetail/UserDetail'
+import AdminChatRoom from './pages/AdminChatRoom/AdminChatRoom'
 
 
 const App = () => {
@@ -62,6 +64,8 @@ const App = () => {
                 <Route path='/refDash' element={<RefDash />} />
                 <Route path='/logadmin' element={<LogAdmin />} />
                 <Route path='/scheduler' element={<MeetingScheduler />} />
+                <Route path='/chatroom' element={<AdminChatRoom />} />
+                <Route path='/userdetail' element={<UserDetail />} />
                 <Route path='*' element={<><h1>404 Page Not Found</h1></>} />
               </Routes>
             </>
