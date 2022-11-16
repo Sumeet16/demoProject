@@ -40,7 +40,7 @@ const MeetingScheduler = () => {
     event.preventDefault();
     const { meetingTitle, dateAndTimeSelecter, courseTitle } = newMeetingSchema;
     const courseData = JSON.parse(courseTitle)
-    const meetingLink = `http://localhost:3000/?id=-${courseData.title.replaceAll(' ', '')}&ref=user`
+    const meetingLink = `http://localhost:3000/?id=${courseData.title.replaceAll(' ', '')}&ref=user`
 
     const res = await fetch("http://localhost:8080/addNewMeeting", {
       method: "POST",

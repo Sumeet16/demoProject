@@ -30,7 +30,9 @@ const ChatRoom = () => {
   const messagesRef = firestore.collection(id);
   const query = messagesRef.orderBy('createdAt').limit(25);
   const [messages] = useCollectionData(query, { idField: 'id' });
+  const element = document.getElementById("scrollToBottomDiv");
   let i
+
 
   username = queryParams.get('userName');
   if (username === "Admin") {
@@ -57,40 +59,41 @@ const ChatRoom = () => {
     })
 
     setchatInput("")
+    window.scrollTo(top)
   }
 
-  console.log(i);
 
   return (
     <>
       <Header color="black" />
       <div className="chat_container">
-        <div className="chat_response_container">
-          <main>
-            {messages ? messages.map((elem, index) => {
-              return (
-                <>
-                  {i === elem.i ? <>
-                    <div className="individual_chat_container send">
-                      <div className="person_image">{(elem.i).charAt(0)}</div>
-                      <div className="inner_chat_cont">
-                        <div className="chat_text"><p>{elem.t}</p></div>
-                        <div className="row_cont"><div className="chat_time">{elem.m}</div><div className="chat_user_tag">@{elem.i}</div></div>
+        <div className="chat_response_container" id="scrollToBottomDiv">
+          {messages ?
+              [...messages]
+              .reverse()
+              .map((elem, index) => {
+                return (
+                  <>
+                    {i === elem.i ? <>
+                      <div className="individual_chat_container send">
+                        <div className="person_image">{(elem.i).charAt(0)}</div>
+                        <div className="inner_chat_cont">
+                          <div className="chat_text"><p>{elem.t}</p></div>
+                          <div className="row_cont"><div className="chat_time">{elem.m}</div><div className="chat_user_tag">@{elem.i}</div></div>
+                        </div>
                       </div>
-                    </div>
-                  </> : <>
-                    <div className="individual_chat_container">
-                      <div className="person_image">{(elem.i).charAt(0)}</div>
-                      <div className="inner_chat_cont">
-                        <div className="chat_text"><p>{elem.t}</p></div>
-                        <div className="row_cont"><div className="chat_time">{elem.m}</div><div className="chat_user_tag">@{elem.i}</div></div>
+                    </> : <>
+                      <div className="individual_chat_container">
+                        <div className="person_image">{(elem.i).charAt(0)}</div>
+                        <div className="inner_chat_cont">
+                          <div className="chat_text"><p>{elem.t}</p></div>
+                          <div className="row_cont"><div className="chat_time">{elem.m}</div><div className="chat_user_tag">@{elem.i}</div></div>
+                        </div>
                       </div>
-                    </div>
-                  </>}
-                </>
-              )
-            }) : <div className="center">LOADING MESSAGES</div>}
-          </main>
+                    </>}
+                  </>
+                )
+              }) : <div className="center">LOADING MESSAGES</div>}
         </div>
         <div className="input_chat_app">
           <input type="text" name="chat-input" id="chat-input" autoComplete="off" onChange={handleChange} value={chatInput} placeholder="Add your message" />
