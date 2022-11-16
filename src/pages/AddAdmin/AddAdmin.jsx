@@ -19,7 +19,7 @@ const AddAdmin = () => {
 
     const { username, email, password } = newAdminSchema;
 
-    const res = await fetch("http://localhost:8080/addAdmin", {
+    const res = await fetch("http://localhost:8000/addAdmin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -43,7 +43,7 @@ const AddAdmin = () => {
         progress: undefined,
       });
     } else {
-      navigate("/logadmin", {replace:true});
+      navigate("/logadmin", { replace: true });
     }
   };
   return (

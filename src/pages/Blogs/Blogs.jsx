@@ -20,7 +20,7 @@ const Blogs = () => {
     setLoading(true);
 
     const getBlogs = async () => {
-      const res = await axios("http://localhost:8080/getBlogs", {
+      const res = await axios("http://localhost:8000/getBlogs", {
         method: "GET",
       });
       setBlogs(res.data.blogs);
@@ -81,7 +81,7 @@ const Blogs = () => {
                     return (
                       <RecentBlogCard blog={blog} />
                     );
-                })}
+                  })}
                 <p
                   className="read-more"
                   onClick={() => {

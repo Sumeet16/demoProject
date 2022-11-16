@@ -16,14 +16,14 @@ const CourseLandingPage = () => {
         const getUser = async () => {
             const userId = localStorage.getItem("userId")
 
-            const response = await axios.post("http://localhost:8080/getUser", {
+            const response = await axios.post("http://localhost:8000/getUser", {
                 userId
             })
             localStorage.setItem("userData", response.data.user.myLearning);
         }
         getUser()
         const getCourseById = async (id) => {
-            const res = await fetch("http://localhost:8080/getCourseById", {
+            const res = await fetch("http://localhost:8000/getCourseById", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

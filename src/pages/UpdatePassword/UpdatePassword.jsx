@@ -22,7 +22,7 @@ const UpdatePassword = () => {
 
         const { email, password } = info;
 
-        const res = await fetch("http://localhost:8080/updatepassword", {
+        const res = await fetch("http://localhost:8000/updatepassword", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -30,15 +30,15 @@ const UpdatePassword = () => {
             body: JSON.stringify({
                 email, password
             })
-        }) 
+        })
 
         const result = await res.json();
         const statusCode = res.status;
 
         console.log(statusCode);
 
-        
-         if (statusCode === 404) {
+
+        if (statusCode === 404) {
             toast.error('Username Not Found !!!', {
                 position: "top-right",
                 autoClose: 5000,
@@ -68,7 +68,7 @@ const UpdatePassword = () => {
                 draggable: true,
                 progress: undefined,
             });
-        } else{
+        } else {
             toast.success('Password Updated !!!', {
                 position: "top-right",
                 autoClose: 5000,
@@ -78,7 +78,7 @@ const UpdatePassword = () => {
                 draggable: true,
                 progress: undefined,
             });
-            navigate("/verify-pin", {replace:true})
+            navigate("/verify-pin", { replace: true })
         }
 
 
@@ -86,7 +86,7 @@ const UpdatePassword = () => {
 
     return (
         <>
-        <Header color="black" />
+            <Header color="black" />
             <h1>Update Password</h1>
 
             <div className="app_container">

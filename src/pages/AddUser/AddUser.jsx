@@ -64,7 +64,7 @@ const AddUser = () => {
 
         const { username, email, password, code, phone } = userDetails;
 
-        const res = await fetch("http://localhost:8080/registerUser", {
+        const res = await fetch("http://localhost:8000/registerUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -117,7 +117,7 @@ const AddUser = () => {
     return (
         <>
             <img src={backImg} className="login-back-image" alt="back-image" />
-            <div className="login-form-content" style={{marginTop: "-2rem"}}>
+            <div className="login-form-content" style={{ marginTop: "-2rem" }}>
                 <form method="post" className="inputs" onSubmit={handleSubmit}>
 
                     <h2 style={{ color: "black" }}>Register Yourself</h2>
@@ -165,12 +165,12 @@ const AddUser = () => {
                                 <input type="number" name="phone" id="phone" placeholder="Enter Your Phone" onChange={handleChange} autoComplete="off" />
                             </div>
                         </div>
-                        <div className="alreadyuser" style={{marginBottom: "1rem"}}>
+                        <div className="alreadyuser" style={{ marginBottom: "1rem" }}>
                             <input type="checkbox" onChange={handleCheckChange} />
                             <a href="/terms&condition">Terms and Condition</a>
                         </div>
                         <div className="alreadyuser">
-                            <a href="/loguser" className="userLink" style={{marginBottom: "1rem"}}>Already a User</a>
+                            <a href="/loguser" className="userLink" style={{ marginBottom: "1rem" }}>Already a User</a>
                         </div>
 
                         <button type="submit" className="login-btn new">Register</button>

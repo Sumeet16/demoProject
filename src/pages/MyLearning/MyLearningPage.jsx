@@ -15,7 +15,7 @@ const MyLearning = () => {
 
     const getCourse = async (elem) => {
         const id = elem
-        const response = await axios.post("http://localhost:8080/getCourseById", {
+        const response = await axios.post("http://localhost:8000/getCourseById", {
             id
         })
         setCourse(courses => [...courses, response.data.course])
@@ -24,7 +24,7 @@ const MyLearning = () => {
     const getUser = async () => {
         const userId = localStorage.getItem("userId")
 
-        const response = await axios.post("http://localhost:8080/getUser", {
+        const response = await axios.post("http://localhost:8000/getUser", {
             userId
         })
         setUser(response.data.user);

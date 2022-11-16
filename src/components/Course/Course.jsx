@@ -8,7 +8,7 @@ const Course = () => {
     const navigate = useNavigate();
     const [course, setCourse] = useState([]);
     const getCourse = async () => {
-        const res = await axios("http://localhost:8080/getCourse", {
+        const res = await axios("http://localhost:8000/getCourse", {
             method: "GET",
         });
         setCourse(res.data.course);
@@ -38,7 +38,7 @@ const Course = () => {
                                         <img src={elem.courseImage} className="image image_card" alt="" srcset="" />
                                         <h2>{elem.title}</h2>
                                         <p className="course_disc">{elem.description}</p>
-                                        <a className="button" onClick={() => {navigate(`/course?id=${elem._id}`, { replace: true }); window.scrollTo(top)}}>View Course</a>
+                                        <a className="button" onClick={() => { navigate(`/course?id=${elem._id}`, { replace: true }); window.scrollTo(top) }}>View Course</a>
                                     </div>
                                 )
                             })

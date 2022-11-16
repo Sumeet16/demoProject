@@ -12,14 +12,14 @@ const UrlMaker = () => {
     const [videoTitle, setvideoTitle] = useState("");
 
     const getVideoList = async () => {
-        const res = await axios("http://localhost:8080/getVideos", {
+        const res = await axios("http://localhost:8000/getVideos", {
             method: "GET",
         });
         setvideoData(res.data.video);
     }
 
     const deleteIt = async (id) => {
-        const res = await fetch("http://localhost:8080/deleteVideo", {
+        const res = await fetch("http://localhost:8000/deleteVideo", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const UrlMaker = () => {
 
     const handleFileSubmit = async (e) => {
         e.preventDefault();
-        const res = await fetch("http://localhost:8080/videotoUrl", {
+        const res = await fetch("http://localhost:8000/videotoUrl", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

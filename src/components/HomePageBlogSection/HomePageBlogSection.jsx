@@ -8,7 +8,7 @@ const HomePageBlogSection = () => {
     useEffect(() => {
 
         const getBlogs = async () => {
-            const res = await axios("http://localhost:8080/getBlogs", {
+            const res = await axios("http://localhost:8000/getBlogs", {
                 method: "GET",
             });
             setBlogs(res.data.blogs);
@@ -34,21 +34,21 @@ const HomePageBlogSection = () => {
                     <div class="row">
                         {
                             [...blogs]
-                            .reverse()
-                            .slice(0, 5)
-                            .reverse()
-                            .map((elem, index) => {
-                                return (
-                                    <>
-                                        <div className="blog_row">
-                                            <img src={elem.image} alt="blogsImage" />
-                                            <p className="date">8 April 2022</p>
-                                            <h4 className="blogTitle">{elem.title}</h4>
-                                            <a href="#">Read More</a>
-                                        </div>
-                                    </>
-                                )
-                            })
+                                .reverse()
+                                .slice(0, 5)
+                                .reverse()
+                                .map((elem, index) => {
+                                    return (
+                                        <>
+                                            <div className="blog_row">
+                                                <img src={elem.image} alt="blogsImage" />
+                                                <p className="date">8 April 2022</p>
+                                                <h4 className="blogTitle">{elem.title}</h4>
+                                                <a href="#">Read More</a>
+                                            </div>
+                                        </>
+                                    )
+                                })
                         }
                     </div>
                 </div>

@@ -24,7 +24,7 @@ const StripeContainer = () => {
       navigate(`/loguser`)
     }
     const getCourseById = async (id) => {
-      const res = await fetch("http://localhost:8080/getCourseById", {
+      const res = await fetch("http://localhost:8000/getCourseById", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const StripeContainer = () => {
     const getUser = async () => {
       const userId = localStorage.getItem("userId")
 
-      const response = await axios.post("http://localhost:8080/getUser", {
+      const response = await axios.post("http://localhost:8000/getUser", {
         userId
       })
       setUser(response.data.user);
@@ -72,7 +72,7 @@ const StripeContainer = () => {
       var transactionid;
       if (transactionId || newImg) {
         transactionid = transactionId
-        const response = await axios.post("http://localhost:8080/order", {
+        const response = await axios.post("http://localhost:8000/order", {
           amount: courseInfo.dprice,
           courseId: courseInfo._id,
           courseTitle: courseInfo.title,
@@ -88,7 +88,7 @@ const StripeContainer = () => {
           setcloseState(false)
           setsuccess(true)
         }
-      }else {
+      } else {
         alert("Enter the input properly....")
       }
     } catch (error) {
@@ -120,7 +120,7 @@ const StripeContainer = () => {
           <div className="blur"></div>
           <div className="success_page">
             <h1>Order Submitted🎉🎉</h1>
-            <div className="confirnBtn" onClick={() => {navigate("/", { replace: true })}} style={{ width: "50%", textAlign: "center", cursor: "pointer", background: "orange", padding: "1rem", borderRadius: "2rem" }}>Go Back To Home Page</div>
+            <div className="confirnBtn" onClick={() => { navigate("/", { replace: true }) }} style={{ width: "50%", textAlign: "center", cursor: "pointer", background: "orange", padding: "1rem", borderRadius: "2rem" }}>Go Back To Home Page</div>
           </div>
         </div>
         <div style={closeState ? { visibility: "visible" } : { visibility: "hidden" }}>

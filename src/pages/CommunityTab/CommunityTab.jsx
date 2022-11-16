@@ -5,14 +5,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const CommunityTab = () => {
-    const [user, setUser] = useState([]);
     const [courses, setCourse] = useState([]);
     const navigate = useNavigate();
 
 
     const getCourse = async (elem) => {
         const id = elem
-        const response = await axios.post("http://localhost:8080/getCourseById", {
+        const response = await axios.post("http://localhost:8000/getCourseById", {
             id
         })
         setCourse(courses => [...courses, response.data.course])
@@ -29,10 +28,10 @@ const CommunityTab = () => {
     const getUser = async () => {
         const userId = localStorage.getItem("userId")
 
-        const response = await axios.post("http://localhost:8080/getUser", {
+        const response = await axios.post("http://localhost:8000/getUser", {
             userId
         })
-        setUser(response.data.user);
+        localStorage.setItem("userData", response.data.user.myLearning);
     }
 
     useEffect(() => {

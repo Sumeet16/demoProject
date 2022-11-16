@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const Banner_2 = () => {
     const [course, setCourse] = useState([]);
     const getCourse = async () => {
-        const res = await axios("http://localhost:8080/getCourse", {
+        const res = await axios("http://localhost:8000/getCourse", {
             method: "GET",
         });
         setCourse(res.data.course);

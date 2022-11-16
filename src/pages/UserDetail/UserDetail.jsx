@@ -9,7 +9,7 @@ const UserDetail = () => {
     useEffect(() => {
 
         const getUsers = async () => {
-            const res = await axios("http://localhost:8080/getUsers", {
+            const res = await axios("http://localhost:8000/getUsers", {
                 method: "GET",
             });
             setUsers(res.data.user)

@@ -13,7 +13,7 @@ const AllCoursePage = () => {
 
     useEffect(() => {
         const getCourse = async () => {
-            const res = await axios("http://localhost:8080/getCourse", {
+            const res = await axios("http://localhost:8000/getCourse", {
                 method: "GET",
             });
             setCourse(res.data.course);
@@ -23,7 +23,7 @@ const AllCoursePage = () => {
         const getUser = async () => {
             const userId = localStorage.getItem("userId")
 
-            const response = await axios.post("http://localhost:8080/getUser", {
+            const response = await axios.post("http://localhost:8000/getUser", {
                 userId
             })
             localStorage.setItem("userData", response.data.user.myLearning);

@@ -11,7 +11,7 @@ const Blog = () => {
     const [blogDetails, setBlogDetails] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:8080/getBlog', {
+        fetch('http://localhost:8000/getBlog', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const Blog = () => {
             <Header />
             {
                 Object.keys(blogDetails).length !== 0 && (
-                    <section className='blogContain' style={{margin: "2rem 0"}}>
+                    <section className='blogContain' style={{ margin: "2rem 0" }}>
                         <div className='blogMain'>
                             <div className='blogImageContain'>
                                 <img src={blogDetails.image} alt="" />

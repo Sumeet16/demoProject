@@ -29,7 +29,7 @@ const AddProduct = () => {
   }
 
   const getCourse = async () => {
-    const res = await axios("http://localhost:8080/getCourse", {
+    const res = await axios("http://localhost:8000/getCourse", {
       method: "GET",
     });
     setCourse(res.data.course);
@@ -56,7 +56,7 @@ const AddProduct = () => {
       });
     }
 
-    const res = await fetch("http://localhost:8080/addCourse", {
+    const res = await fetch("http://localhost:8000/addCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -124,7 +124,7 @@ const AddProduct = () => {
   }, []);
 
   const deleteIt = async (id) => {
-    const res = await fetch("http://localhost:8080/deleteCourse", {
+    const res = await fetch("http://localhost:8000/deleteCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const AddProduct = () => {
   }
 
   const getCourseById = async (id) => {
-    const res = await fetch("http://localhost:8080/getCourseById", {
+    const res = await fetch("http://localhost:8000/getCourseById", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -178,7 +178,7 @@ const AddProduct = () => {
       });
     }
 
-    const res = await fetch("http://localhost:8080/updateCourse", {
+    const res = await fetch("http://localhost:8000/updateCourse", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -283,7 +283,7 @@ const AddProduct = () => {
                   videos.map((elem, index) => {
                     return (
                       <>
-                        <div className="videoLink_innerDiv" style={{display: "flex"}}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index); }} /><a href={elem.videoUrl}>{elem.videoUrl}</a><br /></div>
+                        <div className="videoLink_innerDiv" style={{ display: "flex" }}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index); }} /><a href={elem.videoUrl}>{elem.videoUrl}</a><br /></div>
                       </>
                     )
                   })
@@ -362,7 +362,7 @@ const AddProduct = () => {
                     console.log(elem);
                     return (
                       <>
-                        <div className="videoLink_innerDiv" style={{display: "flex"}}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index) }} /><a href={elem}>{elem}</a><br /></div>
+                        <div className="videoLink_innerDiv" style={{ display: "flex" }}><UilTimes className="CourseCross" key={index} onClick={() => { removeIt(index) }} /><a href={elem}>{elem}</a><br /></div>
                       </>
                     )
                   })

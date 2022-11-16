@@ -22,14 +22,14 @@ const MeetingScheduler = () => {
   };
 
   const getCourse = async () => {
-    const res = await axios("http://localhost:8080/getCourse", {
+    const res = await axios("http://localhost:8000/getCourse", {
       method: "GET",
     });
     setCourseTitle(res.data.course);
   };
 
   const getMeetingsList = async () => {
-    const res = await axios("http://localhost:8080/getMeetings", {
+    const res = await axios("http://localhost:8000/getMeetings", {
       method: "GET",
     });
 
@@ -42,7 +42,7 @@ const MeetingScheduler = () => {
     const courseData = JSON.parse(courseTitle)
     const meetingLink = `http://localhost:3000/?id=${courseData.title.replaceAll(' ', '')}&ref=user`
 
-    const res = await fetch("http://localhost:8080/addNewMeeting", {
+    const res = await fetch("http://localhost:8000/addNewMeeting", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const MeetingScheduler = () => {
   }
 
   const handleDelete = async (id) => {
-    const res = await fetch("http://localhost:8080/deleteMeeting", {
+    const res = await fetch("http://localhost:8000/deleteMeeting", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

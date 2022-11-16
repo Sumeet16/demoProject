@@ -7,7 +7,7 @@ const AdminChatRoom = () => {
     let link
     const [course, setCourse] = useState([]);
     const getCourse = async () => {
-        const res = await axios("http://localhost:8080/getCourse", {
+        const res = await axios("http://localhost:8000/getCourse", {
             method: "GET",
         });
         setCourse(res.data.course);

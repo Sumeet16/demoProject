@@ -34,6 +34,8 @@ import ShippingPolicy from './pages/ShippingPolicy/ShippingPolicy'
 import VerifyPin from './pages/VerifyPin/VerifyPin'
 import UserDetail from './pages/UserDetail/UserDetail'
 import AdminChatRoom from './pages/AdminChatRoom/AdminChatRoom'
+import MeetingChatRoom from './pages/MeetingChatRoom/MeetingChatRoom'
+
 
 
 const App = () => {
@@ -95,6 +97,7 @@ const App = () => {
                 <Route path='/verify-pin' element={ <VerifyPin />} />
                 <Route path='/contact' element={ <Contact />} />
                 <Route path='/events' element={ <Events />} />
+                <Route path='/meetingChatRoom' element={ <MeetingChatRoom />} />
               </Routes>
             ) :
             (

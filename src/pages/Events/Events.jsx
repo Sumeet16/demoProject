@@ -13,7 +13,7 @@ const Events = () => {
 
     useEffect(() => {
         const getMeetingsList = async () => {
-            const res = await axios("http://localhost:8080/getMeetings", {
+            const res = await axios("http://localhost:8000/getMeetings", {
                 method: "GET",
             });
 
@@ -45,6 +45,8 @@ const Events = () => {
             {ScheduleMeeting.length == 0 ? <><h2 style={{ margin: "1rem", fontWeight: "600" }}>No Scheduled Event At This Time...</h2></> : <div className="updateCourseCard">
                 {
                     ScheduleMeeting.map((elem, index) => {
+                        const access = localStorage.getItem("userName");
+                        const meetingLink = `http://localhost:3000/?id=${elem.courseT.replaceAll(' ', '')}&ref=user&&name=${access}`
                         return (
                             <>
                                 <div className="cardRow" style={{ marginLeft: "1rem", marginTop: "2rem" }}>
@@ -63,7 +65,7 @@ const Events = () => {
                                         </div>
                                     </div>
                                     <div className="rightSide" style={{ width: "15%" }}>
-                                        <div className="editBTN" style={{ fontWeight: "800", fontSize: "1.1rem" }}> <a style={{ textDecoration: "none", color: "black" }} href={elem.meetingLink} target="_blank" rel="noopener noreferrer">Join Now</a> </div>
+                                        <div className="editBTN" style={{ fontWeight: "800", fontSize: "1.1rem" }}> <a style={{ textDecoration: "none", color: "black" }} href={meetingLink} target="_blank" rel="noopener noreferrer">Join Now</a> </div>
                                     </div>
                                 </div>
                             </>

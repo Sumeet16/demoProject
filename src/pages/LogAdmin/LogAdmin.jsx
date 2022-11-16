@@ -22,7 +22,7 @@ const LogAdmin = () => {
 
         const { email, password } = userDetails;
 
-        const res = await fetch("http://localhost:8080/logAdmin", {
+        const res = await fetch("http://localhost:8000/logAdmin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -69,7 +69,7 @@ const LogAdmin = () => {
                 progress: undefined,
             });
 
-            navigate("/", {replace: true})
+            navigate("/", { replace: true })
 
         }
     }

@@ -19,7 +19,7 @@ const Dashboard = () => {
 
   const getSales = async () => {
     try {
-      const res = await fetch("http://localhost:8080/getSales");
+      const res = await fetch("http://localhost:8000/getSales");
 
       const sales = await res.json();
 
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
   const getOrder = async () => {
     try {
-      const res = await fetch("http://localhost:8080/getOrder");
+      const res = await fetch("http://localhost:8000/getOrder");
       const orders = await res.json();
       setorders(orders.orders)
     } catch (error) {
@@ -45,7 +45,7 @@ const Dashboard = () => {
     localStorage.setItem("userName", "Admin");
   }, [])
 
-  
+
   var totalSales = 0
 
   for (let i = 0; i < sales.length; i++) {
@@ -53,7 +53,7 @@ const Dashboard = () => {
   }
 
   const handleClick = async (element, item) => {
-    const res = await fetch("http://localhost:8080/pay", {
+    const res = await fetch("http://localhost:8000/pay", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +91,7 @@ const Dashboard = () => {
                       <td>{elem.userName}</td>
                       <td>{elem.price} RS</td>
                       <td>{elem.transactionid.length > 0 ? elem.transactionid : <>N/A</>}</td>
-                      <td>{elem.img.length > 0 ? <><a style={{border: "none"}} target="_blank" href={elem.img}>{elem.img}</a></> : <>N/A</>}</td>
+                      <td>{elem.img.length > 0 ? <><a style={{ border: "none" }} target="_blank" href={elem.img}>{elem.img}</a></> : <>N/A</>}</td>
                       <td>{elem.time}</td>
                       <td style={{ display: "flex", justifyContent: "space-around" }}><p onClick={() => { handleClick("Approve", elem) }} style={{ cursor: "pointer" }}>✅</p><p onClick={() => { handleClick("Decline", elem) }} style={{ cursor: "pointer" }}>❌</p></td>
                     </tr>

@@ -19,12 +19,12 @@ const LogUser = () => {
     }
 
     const handleSubmit = async (e) => {
-        
+
         e.preventDefault();
 
         const { email, password } = userDetails;
 
-        const res = await fetch("http://localhost:8080/logUser", {
+        const res = await fetch("http://localhost:8000/logUser", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ const LogUser = () => {
         const result = await res.json();
         const statusCode = res.status;
         console.log(statusCode)
-        
+
         if (statusCode == 422) {
             toast.error('Please Enter all Fields !!!', {
                 position: "center",
@@ -47,7 +47,7 @@ const LogUser = () => {
                 draggable: true,
                 progress: undefined,
             });
-            
+
         } else if (statusCode == 404 || !result) {
             toast.error('Invalid Credentials !!!', {
                 position: "center",
@@ -72,9 +72,9 @@ const LogUser = () => {
                 draggable: true,
                 progress: undefined,
             });
-            navigate("/", {replace:true})
+            navigate("/", { replace: true })
         }
-       
+
     }
 
     return (
@@ -100,10 +100,10 @@ const LogUser = () => {
                         <input type="password" name="password" id="password" placeholder="Enter Your Password" onChange={handleChange} autoComplete="off" />
                     </div>
                     <div className="update_pass">
-                        <a href="/updatepass" className="userLink" style={{color: "black"}}>Forgot Password</a>
+                        <a href="/updatepass" className="userLink" style={{ color: "black" }}>Forgot Password</a>
                     </div>
                     <div className="alreadyuser">
-                        <a href="/adduser" style={{color:"black"}}>Create Account</a>
+                        <a href="/adduser" style={{ color: "black" }}>Create Account</a>
                     </div>
 
                     <button type="submit" className="login-btn">Login</button>
